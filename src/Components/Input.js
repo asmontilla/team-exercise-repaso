@@ -6,6 +6,7 @@ class Input extends React.Component {
             <div className="form">
                 <form>
                     <input type="text" value="Nombre de usuario"></input>
+                    <p>prueba push</p>
                 </form>
                 
                 
