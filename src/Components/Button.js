@@ -4,11 +4,7 @@ class Input extends React.Component {
     render() {
         return (
             <div className="Button">
-                <form>
-                    <button type="text" value="validar"></button>
-                </form>
-                
-                
+                <button type="text" value="validar"></button>
             </div>
         )
     }
