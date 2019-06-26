@@ -4,12 +4,8 @@ class Input extends Component {
     render() {
         return (
             <div className="Button">
-                <form>
-                    <button type="text" value="validar"></button>
-                </form>
-                
-                
-            </div>
+                    <button type="text" value="validar">{this.props.children}</button>
+            </div> 
         )
     }
 }

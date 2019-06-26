@@ -4,25 +4,26 @@ import Button from './Button';
 
 class Form extends React.Component {
     state={}
-    handleChange=(field, value)=>this.setState({[field]: value})
+    handleChange=(field, value)=>{
+        this.setState({[field]: value})
+        debugger;
+        if(this.props.handleChange){
+            this.props.handleChange(field, value);
+        }
+}
     render() {
-        const {user, password} = this.state
         return (
             <div className="form">
-                <form>
+                <form> 
+                    {this.props.fields.map(field => 
                     <Input 
-                        name='user'
-                        value={user} 
+                        {...field}
+                        value={this.state[field.name]} 
                         handleChange={this.handleChange} 
-                        placeholder="ingrese usuario"    
-                    />
-                    <Input 
-                        name='password'
-                        value={password} 
-                        handleChange={this.handleChange} 
-                        placeholder="ingrese password"    
-                    />
-                    <Button></Button>
+                        placeholder={`ingrese ${field.name}`}    
+                    />)}
+                    
+                    <Button>Guardar</Button>
                 </form>
                
                 
