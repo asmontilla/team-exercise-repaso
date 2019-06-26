@@ -36,8 +36,8 @@ class ProductList extends Component {
 
   render () {
 
-    const products = this.state.products.map((r, i) =>
-    <Product productName={r.name} thiskey={i} thisid={r.id} thiscategory={r.category} />
+    const products = this.state.products.map((r) =>
+    <Product productName={r.name} thiskey={r.id}  thiscategory={r.category} />
     )
 
     return (

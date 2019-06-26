@@ -1,14 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Input extends React.Component {
+class Input extends Component {
     render() {
         return (
             <div className="Button">
                 <form>
                     <button type="text" value="validar"></button>
-                </form>
-                
-                
+                </form>                
             </div>
         )
     }
