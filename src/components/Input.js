@@ -4,24 +4,24 @@ import PropTypes from 'prop-types';
 class Input extends React.Component {
     onChange = event => this.props.handleChange(this.props.name, event.target.value)
     render() {
-        const {value, placeholder, name} = this.props
+        const {value, placeholder, name, type} = this.props
         return (
             <div className="form">
-                <form>
+                <p>{name}</p>
                     <input 
                         name={name}
-                        type="text"
+                        type={type}
                         value={value}
                         placeholder={placeholder}
                         onChange={this.onChange} 
                     />
-                    <p>prueba push</p>
-                </form>
-                
-                
             </div>
         )
     }
+}
+
+Input.defaultProps = {
+    type: "text"
 }
 
 Input.propTypes = {

@@ -13,9 +13,9 @@ class CustomRoute extends React.Component {
         return true
     }
   render () {
-      const {component: Component, isPrivate, isLogged, ...props} = this.props;
+      const {component: Component, isPrivate, isLogged, login, logout, ...props} = this.props;
     return (
-          <Route render={() => this.shouldRedirect() ? <Redirect to={isLogged ? ROUTES.productList : ROUTES.login} />: <Component />} {...props}/>
+          <Route render={() => this.shouldRedirect() ? <Redirect to={isLogged ? ROUTES.productList : ROUTES.login} />: <Component login={login} logout={logout}/>} {...props}/>
     )
   }
 }

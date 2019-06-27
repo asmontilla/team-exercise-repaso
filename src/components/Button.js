@@ -5,8 +5,8 @@ class Button extends Component {
 
         return (
             <div className="Button">
-                    <button type="submit" onClick={this.props.onClick}></button>
-            </div>
+                    <button type="text" value="validar" onClick={this.props.onClick}>{this.props.children}</button>
+            </div> 
         )
     }
 }
