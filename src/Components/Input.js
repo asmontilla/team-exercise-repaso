@@ -15,7 +15,7 @@ class Input extends React.Component {
                         placeholder={placeholder}
                         onChange={this.onChange} 
                     />
-                    <p>prueba push</p>
+                 
                 </form>
                 
                 
@@ -23,6 +23,8 @@ class Input extends React.Component {
         )
     }
 }
+
+/// de donde viene o quien es prop-types???
 
 Input.propTypes = {
     name: PropTypes.string,
