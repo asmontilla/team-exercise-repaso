@@ -15,10 +15,7 @@ class Input extends React.Component {
                         placeholder={placeholder}
                         onChange={this.onChange} 
                     />
-                    <p>prueba push</p>
-                </form>
-                
-                
+                </form>                
             </div>
         )
     }
