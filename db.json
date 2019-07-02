@@ -1,19 +1,15 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
+  "users": [
+    {"id": "1", "username": "pablocid", "password": "pablo123"}
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
+  "session": [
+    {"user_id": "1", "expiration_date": "2019-06-20"}
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "products": [
+    {"id": "1", "name": "Teclado", "category": "Periférico", "is_active": "true"},
+    {"id": "2", "name": "Mouse", "category": "Periférico", "is_active": "true"},
+    {"id": "3", "name": "Cámara", "category": "Periférico", "is_active": "true"},
+    {"id": "4", "name": "Auriculares", "category": "Periférico", "is_active": "true"},
+    {"id": "5", "name": "Micrófono", "category": "Periférico", "is_active": "true"}
+  ]
 }
