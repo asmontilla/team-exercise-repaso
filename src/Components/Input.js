@@ -3,8 +3,10 @@ import React from 'react';
 class Input extends React.Component {
     render() {
         return (
-            <div>
-                <input type="text" value="Nombre de usuario"></input>  
+            <div className="form">
+                <form>
+                    <input type="text"></input>
+                </form>               
             </div>
         )
     }
