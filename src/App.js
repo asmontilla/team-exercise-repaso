@@ -1,11 +1,12 @@
 import React from 'react';
-import Form from './components/Form'
+import ProductList from './components/ProductList'
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <div>
-                <Form/>
+              <ProductList></ProductList>
+                {/* <Form/> */}
             </div>
         );
     }

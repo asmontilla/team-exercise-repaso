@@ -40,10 +40,8 @@ class ProductList extends Component {
   
   render () {
 
-    // const products = this.state.products.map((r) =>
-    // <Product productName={r.name} thiskey={r.id}  thiscategory={r.category} />
-    // )
-    const filteredProducts = this.state.products.filter((r)=>{return r.name.indexOf(this.state.valorDelInput) !== -1})
+    
+    const filteredProducts = this.state.products.filter((r)=>{return r.name.toLowerCase().indexOf(this.state.valorDelInput.toLocaleLowerCase()) !== -1})
 
     return (
       <div className="main">

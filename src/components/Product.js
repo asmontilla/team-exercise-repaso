@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function Product(props) {
     return (
           <div key={props.thiskey} className="box_component_product">
