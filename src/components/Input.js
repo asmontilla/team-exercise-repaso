@@ -1,11 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Input extends React.Component {
     render() {
         const {value, placeholder, name, type} = this.props
         return (
             <div className="form">
-                <p>{name}</p>
                     <input 
                         name={name}
                         type={type}

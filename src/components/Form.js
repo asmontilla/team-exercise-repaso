@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from 'Input';
-import Button from 'Buttom';
+import Input from './Input';
+import Button from './Button';
 
 class Form extends React.Component {
     state={}

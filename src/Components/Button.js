@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Input extends React.Component {
+class Button extends React.Component {
     render() {
         return (
             <div className="Button">
@@ -10,4 +10,4 @@ class Input extends React.Component {
     }
 }
 
-export default Input;
+export default Button;
