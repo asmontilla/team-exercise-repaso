@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Form from './components/Form';
+import ProductList from './components/ProductList';
+const FIELDS_LOGIN = [{name: 'user'}, {name: 'password', type: "password"}]
+const FIELDS_SIGNUP = [{name: 'name'}, {name: 'lastname'}]
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form fields={FIELDS_LOGIN} />
+      <Form fields={FIELDS_SIGNUP} />
+      <ProductList/>
     </div>
-  );
+  )
 }
 
 export default App;
