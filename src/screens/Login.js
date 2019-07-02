@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../Components/Form';
+import Form from '../components/Form';
 import {FIELDS_LOGIN} from '../constants/fields'
 
 function Login ({login}) {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter, Switch, Redirect} from 'react-router-dom';
 import Login from './screens/Login';
 import ProductList from './screens/ProductList';
-import Route from './Components/Route';
+import Route from './components/Route';
 
 class App extends Component {
   state={isLogged: false}
