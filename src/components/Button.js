@@ -1,15 +1,13 @@
 import React from 'react';
 
-class Input extends React.Component {
+class Button extends React.Component {
     render() {
         return (
             <div className="Button">
-                <form>
-                    <button type="submit"></button>
-                </form>          
-            </div>
+                    <button type="text" value="validar">{this.props.children}</button>
+            </div> 
         )
     }
 }
 
-export default Input;
+export default Button;

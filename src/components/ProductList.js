@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../stylesheet/App.css';
 import Product from './Product';
 // import Input from './Input';
+// import Button from './Button';
 
 class ProductList extends Component {
   constructor (props) {
