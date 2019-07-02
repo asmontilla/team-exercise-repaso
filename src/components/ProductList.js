@@ -40,8 +40,6 @@ class ProductList extends Component {
 
   
   render () {
-
-    
     const filteredProducts = this.state.products.filter((r)=>{return r.name.toLowerCase().indexOf(this.state.valorDelInput.toLocaleLowerCase()) !== -1})
 
     return (

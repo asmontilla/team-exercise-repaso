@@ -14,7 +14,7 @@ class Input extends React.Component {
                         onChange={this.onChange} 
                     />
             </div>
-        )
+        );
     }
 }
 
