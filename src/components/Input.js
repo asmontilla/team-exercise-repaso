@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Input extends React.Component {
+    onChange = event => this.props.handleChange(this.props.name, event.target.value)
     render() {
         const {value, placeholder, name, type} = this.props
         return (
             <div className="form">
+                <p>{name}</p>
                     <input 
                         name={name}
                         type={type}

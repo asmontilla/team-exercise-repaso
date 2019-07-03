@@ -10,7 +10,7 @@ class Form extends React.Component {
         if(this.props.handleChange){
             this.props.handleChange(field, value);
         }
-}
+    }
     render() {
         return (
             <div className="form">
@@ -23,7 +23,7 @@ class Form extends React.Component {
                         placeholder={`ingrese ${field.name}`}    
                     />)}
                     
-                    <Button>Guardar</Button>
+                    <Button onClick={this.props.handleSubmit}>Guardar</Button>
                 </form>
                
                 
