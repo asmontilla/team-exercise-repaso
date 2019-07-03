@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import '../stylesheet/App.css';
-import Product from '../components/Product';
+import Product from './Product';
 // import Input from './Input';
-import Button from '../components/Button';
+// import Button from './Button';
 
 class ProductList extends Component {
   constructor (props) {
@@ -59,7 +59,7 @@ class ProductList extends Component {
               <Product productName={r.name} thiskey={r.id}  thiscategory={r.category} />
               )}
             </div>
-            <Button onClick={this.props.logout}>Cerrar sesión</Button>
+            
           </section>
         </div>
       </div>
