@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
+import { connect } from 'react-redux'
 import ROUTES from '../constants/routes';
 
 
@@ -20,4 +21,8 @@ class CustomRoute extends React.Component {
   }
 }
 
-export default CustomRoute;
+const mapStateToProps = state => ({
+    isLogged: state.login.isLogged
+})
+
+export default connect(mapStateToProps)(CustomRoute);

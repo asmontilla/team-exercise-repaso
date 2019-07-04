@@ -3,22 +3,22 @@ import { BrowserRouter, Switch, Redirect} from 'react-router-dom';
 import Login from './screens/Login';
 import ProductList from './screens/ProductList';
 import Route from './components/Route';
+import {Provider} from 'react-redux';
+import store from './redux/reducers';
 
 class App extends Component {
-  state={isLogged: false}
-  setIsLogged = isLogged => this.setState({isLogged})
-  login = () => this.setIsLogged(true)
-  logout = () => this.setIsLogged(false)
   render() {
     return (
       <div className="App">
+        <Provider store={store}>
           <BrowserRouter>
             <Switch>
-              <Route exact isPrivate isLogged={this.state.isLogged} path="/ProductList" component={ProductList}  logout={this.logout}/>
-              <Route exact isLogged={this.state.isLogged} path="/" component={Login} login={this.login}/>
+              <Route exact isPrivate path="/ProductList" component={ProductList}/>
+              <Route exact path="/" component={Login}/>
               <Redirect to="/"/>
             </Switch>
           </BrowserRouter>
+        </Provider>
       </div>
     );
   }

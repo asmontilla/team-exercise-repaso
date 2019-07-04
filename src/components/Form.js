@@ -6,7 +6,6 @@ class Form extends React.Component {
     state={}
     handleChange=(field, value)=>{
         this.setState({[field]: value})
-        debugger;
         if(this.props.handleChange){
             this.props.handleChange(field, value);
         }

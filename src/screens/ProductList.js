@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux'
+import loginActions from '../redux/loginActions';
 import '../stylesheet/App.css';
 import Product from '../components/Product';
 // import Input from './Input';
 import Button from '../components/Button';
+import productActions from '../redux/productActions';
 
 class ProductList extends Component {
   constructor (props) {
@@ -10,8 +13,8 @@ class ProductList extends Component {
     
     this.state = {
       valorDelInput : '',
-      products: [],
-      loading: true
+      // products: [],
+      // loading: true
     }  
   }
   
@@ -19,28 +22,29 @@ class ProductList extends Component {
       valorDelInput: e.target.value})
   
 
-  CargaDeProductos () {
+  // CargaDeProductos () {
 
-    fetch('http://localhost:3000/products')
-      .then(res => {
-       return res.json()
-       })
-      .then(data => {
-        this.setState({
-          products: data,
-          loading: false
-          })         
-          console.log(this.state.products)
-        })
-  }
+  //   fetch('http://localhost:3000/products')
+  //     .then(res => {
+  //      return res.json()
+  //      })
+  //     .then(data => {
+  //       this.setState({
+  //         products: data,
+  //         loading: false
+  //         })         
+  //         console.log(this.state.products)
+  //       })
+  // }
 
   componentDidMount(){
-    this.CargaDeProductos();
+    // this.CargaDeProductos();
+    this.props.getProducts();
   }
 
   
   render () {
-    const filteredProducts = this.state.products.filter((r)=>{return r.name.toLowerCase().indexOf(this.state.valorDelInput.toLocaleLowerCase()) !== -1})
+    const filteredProducts = this.props.products.filter((r)=>{return r.name.toLowerCase().indexOf(this.state.valorDelInput.toLocaleLowerCase()) !== -1})
 
     return (
       <div className="main">
@@ -67,4 +71,18 @@ class ProductList extends Component {
   }
 }
 
-export default ProductList;
+ProductList.defaultProps = {
+  products: []
+}
+
+const mapStateToProps = state => ({
+  products: state.product.products,
+  loading: state.product.loading
+});
+
+const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch(loginActions.logout()),
+    getProducts: () => dispatch(productActions.getProducts())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
